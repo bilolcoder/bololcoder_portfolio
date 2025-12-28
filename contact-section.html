@@ -1,0 +1,71 @@
+<!-- Insert this where your #contact section should be (replace existing footer/contact if needed) -->
+<section id="contact" class="contact-section">
+  <div class="contact-card">
+    <h2 class="section-title">Aloqa</h2>
+    <p class="contact-desc">Ish taklifi yoki savollar uchun yozing — xabaringiz bevosita Telegramga yuboriladi.</p>
+
+    <form id="contactForm" class="contact-form" aria-label="Contact form">
+      <label for="name">Ism</label>
+      <input id="name" name="name" type="text" required autocomplete="name" />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email" />
+
+      <label for="message">Xabar</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Yuborish</button>
+        <button type="button" id="contactClear" class="btn-secondary">Tozalash</button>
+      </div>
+
+      <p id="contactStatus" class="contact-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- Add this script just before </body> (or in a separate JS file) -->
+<script>
+  (function () {
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('contactStatus');
+    const clearBtn = document.getElementById('contactClear');
+
+    clearBtn.addEventListener('click', () => form.reset());
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = 'Yuborilmoqda...';
+      const data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim()
+      };
+
+      // Basic client-side validation
+      if (!data.name || !data.email || !data.message) {
+        status.textContent = 'Iltimos, barcha maydonlarni to‘ldiring.';
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const json = await res.json();
+        if (res.ok) {
+          status.textContent = 'Rahmat! Xabaringiz yuborildi.';
+          form.reset();
+        } else {
+          status.textContent = json?.error || 'Xatolik yuz berdi. Keyinroq qayta urinib ko‘ring.';
+        }
+      } catch (err) {
+        console.error(err);
+        status.textContent = 'Tarmoq xatosi. Iltimos, keyinroq urinib ko‘ring.';
+      }
+    });
+  })();
+</script>

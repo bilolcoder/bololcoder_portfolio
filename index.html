@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Portfolio | Creative Developer</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Space+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <canvas id="bg" role="img" aria-label="Interactive animated background" ></canvas>
+  <noscript>
+    <style>
+      #bg { display: none; }
+      body { background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; }
+    </style>
+  </noscript>
+
+  <nav>
+    <div class="nav-container" id="navContainer">
+      <div class="logo">Bilol<span>Orifjanov</span></div>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#hero">Bosh sahifa</a>
+        <a href="#about">Texnologiyalar</a>
+        <a href="#projects">Loyihalar</a>
+        <a href="#contact">Aloqa</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://github.com" class="btn-small" target="_blank" rel="noopener">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="sr-only">GitHub profile</span>
+        </a>
+        <button id="toggle3D" class="btn-small btn-toggle" aria-pressed="false">3D: On</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h2 class="mono">// SALOM, DUNYO!</h2>
+        <h1 class="main-title">MEN <span class="gradient-text">FRONTEND</span> ME'MORIMAN</h1>
+        <p class="hero-desc">
+          Men interaktiv va yuqori samarali veb-ilovalarni noldan arxitektura qilaman.
+          React va Tailwind css bilan raqamli dunyoni jonlantiraman.
+        </p>
+        <div class="cta-group">
+          <a class="btn-primary shimmer" href="#projects">Loyihalarni ko'rish</a>
+          <a class="btn-secondary" href="#contact">Bog'lanish</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="stats-section" aria-label="Site statistics">
+      <div class="stat-box">
+        <h3 class="counter" data-target="98">0</h3>
+        <!-- <span>%</span> -->
+        <p>Performance Score</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="counter" data-target="3">0</h3>
+        <!-- <span>+</span> -->
+        <p>Loyiha Yakunlangan</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="counter" data-target="24">0</h3>
+        <!-- <span>/7</span> -->
+        <p>Texnik Qo'llab-quvvatlash</p>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2 class="section-title">Nima bilan shug'ullanaman?</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true"><i class="fa-brands fa-react"></i></div>
+          <h3>Modern Frameworks</h3>
+          <p>React va Next.js ekotizimida murakkab SPA va SSR ilovalar yaratish.</p>
+        </div>
+        <div class="card active">
+          <div class="card-icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></div>
+          <h3>Creative 3D Design</h3>
+          <p>Veb-saytlarga 3D elementlar va Three.js animatsiyalarini integratsiya qilish.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Speed Optimization</h3>
+          <p>Veb-saytlarni yuklanish tezligini oshirish va SEO optimizatsiya qilish.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section" aria-label="Projects">
+      <h2 class="section-title">Saralangan Ishlar</h2>
+      <div class="projects-grid">
+        <div class="project-item" tabindex="0" role="button" aria-label="Web1 Namangan Mash" style="background-image: url(./n1.png)">
+          <div class="overlay">
+            <h3>Web1 Namangan Mash</h3>
+            <p>Temir bilan ishlaydigan zavod</p>
+            <a class="project-link" href="https://namanganmash.netlify.app/" aria-label="Open demo"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Demo</a>
+          </div>
+        </div>
+
+        <div class="project-item" tabindex="0" role="button" aria-label="Namangan K Z S" style="background-image: url(./n2.png)">
+          <div class="overlay">
+            <h3>Namangan K Z S</h3>
+            <p>Analitika tizimi</p>
+            <a class="project-link" href="https://namangantest.netlify.app/" aria-label="Open demo"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Demo</a>
+          </div>
+        </div>
+
+        <div class="project-item" tabindex="0" role="button" aria-label="Denta Go" style="background-image: url(./n3.png)">
+          <div class="overlay">
+            <h3>Denta Go</h3>
+            <p>Dental project demo</p>
+            <a class="project-link" href="https://denta-list-app.vercel.app/" aria-label="Open demo"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-label="Contact">
+      <div class="contact-card">
+        <h2 class="section-title">Aloqa</h2>
+        <p class="contact-desc">Ish taklifi yoki savollar uchun yozing — xabaringiz bevosita Telegramga yuboriladi.</p>
+
+        <form id="contactForm" class="contact-form" aria-label="Contact form">
+          <label for="name">Ism</label>
+          <input id="name" name="name" type="text" required autocomplete="name" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+
+          <label for="message">Xabar</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Yuborish</button>
+            <button type="button" id="contactClear" class="btn-secondary">Tozalash</button>
+          </div>
+
+          <p id="contactStatus" class="contact-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+   <footer class="site-footer" aria-label="Footer">
+
+    <div class="footer-container">
+
+      <div class="footer-top">
+
+        <div class="footer-info">
+
+          <h2 class="footer-logo">Bilol<span> Orifjanov</span></h2>
+
+          <p>Murakkab g'oyalarni raqamli reallikka aylantiramiz. Biz bilan kelajakni quring.</p>
+
+        </div>
+
+
+
+        <div class="footer-socials">
+
+          <h3>Ijtimoiy tarmoqlar</h3>
+
+          <div class="social-icons">
+
+            <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener">
+
+              <span class="icon" aria-hidden="true"><i class="fab fa-instagram"></i></span>
+
+              <span class="name">Instagram</span>
+
+            </a>
+
+            <a href="https://t.me" class="social-link" target="_blank" rel="noopener">
+
+              <span class="icon" aria-hidden="true"><i class="fab fa-telegram"></i></span>
+
+              <span class="name">Telegram</span>
+
+            </a>
+
+            <a href="https://github.com" class="social-link" target="_blank" rel="noopener">
+
+              <span class="icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+
+              <span class="name">GitHub</span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="footer-nav">
+
+          <h3>Navigatsiya</h3>
+
+          <ul class="fot_n">
+
+            <li class="fot_li"><a href="#hero">Bosh sahifa</a></li>
+
+            <li class="fot_li"><a href="#about">Xizmatlar</a></li>
+
+            <li class="fot_li"><a href="#projects">Loyihalar</a></li>
+
+          </ul>
+
+        </div>
+      </div>
+      <div class="footer-bottom">
+
+        <p>&copy; 2025 Developer Portfolio. Barcha huquqlar himoyalangan.</p>
+
+        <p class="designer-tag">Designed with ⚡ by You</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="main.js"></script>
+
+  <script>
+    (function () {
+      const canvas = document.getElementById('bg');
+      const toggle = document.getElementById('toggle3D');
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+      const navContainer = document.getElementById('navContainer');
+
+      const stored = localStorage.getItem('devdesigner.3dDisabled');
+      const isDisabled = stored === 'true';
+      set3DDisabled(isDisabled);
+
+      toggle.addEventListener('click', () => {
+        const currentlyDisabled = canvas.classList.contains('canvas-disabled');
+        set3DDisabled(!currentlyDisabled);
+        localStorage.setItem('devdesigner.3dDisabled', String(!currentlyDisabled));
+      });
+
+      function set3DDisabled(disabled) {
+        if (disabled) {
+          canvas.classList.add('canvas-disabled');
+          canvas.setAttribute('aria-hidden', 'true');
+          toggle.setAttribute('aria-pressed', 'true');
+          toggle.textContent = '3D: Off';
+        } else {
+          canvas.classList.remove('canvas-disabled');
+          canvas.setAttribute('aria-hidden', 'false');
+          toggle.setAttribute('aria-pressed', 'false');
+          toggle.textContent = '3D: On';
+        }
+      }
+
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('open');
+      });
+
+      document.querySelectorAll('.project-item').forEach(item => {
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const firstLink = item.querySelector('.project-link');
+            if (firstLink) firstLink.click();
+          }
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!navContainer.contains(e.target)) {
+          navLinks.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // --- RAQAMLARNI SANASH SCRIPT (STATS ANIMATION) ---
+      const counters = document.querySelectorAll('.counter');
+      const speed = 200;
+
+      const runCounters = () => {
+        counters.forEach(counter => {
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + inc);
+              setTimeout(updateCount, 20);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        });
+      };
+
+      // Scroll bo'lganda sanashni boshlash
+      let started = false;
+      window.addEventListener('scroll', () => {
+        const statsSec = document.getElementById('stats');
+        if (window.scrollY >= statsSec.offsetTop - window.innerHeight && !started) {
+          runCounters();
+          started = true;
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('contactStatus');
+      const clearBtn = document.getElementById('contactClear');
+
+      clearBtn.addEventListener('click', () => {
+        form.reset();
+        status.textContent = '';
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        status.textContent = 'Yuborilmoqda...';
+        status.style.color = "white";
+
+        const BOT_TOKEN = '8356962014:AAHqDuLG10gKpTi3c_7tPhVpd4Mbhh0sgCQ';
+        const CHAT_ID = '7548230903';
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const text = `🚀 Yangi xabar!\n👤 Ism: ${name}\n📧 Email: ${email}\n📝 Xabar: ${message}`;
+        const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}`;
+
+        fetch(url)
+          .then(res => res.json())
+          .then(data => {
+            if (data.ok) {
+              status.textContent = 'Muvaffaqiyatli yuborildi!';
+              status.style.color = "#00ff00";
+              form.reset();
+            } else {
+              status.textContent = 'Xatolik yuz berdi.';
+              status.style.color = "#ff4d4d";
+            }
+          })
+          .catch(err => {
+            status.textContent = 'Tarmoq xatosi.';
+            status.style.color = "#ff4d4d";
+          });
+      });
+    })();
+  </script>
+
+  <!-- ===== Animations (GSAP) =====
+       Adds: page-load intro, looping subtle idle motion, project-item float,
+       improved stats trigger (IntersectionObserver), nav open animation.
+       Respects prefers-reduced-motion.
+  -->
+  <script>
+    (function () {
+      // Respect user's reduced motion preference
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Ensure GSAP is available
+      if (typeof gsap === 'undefined') return;
+
+      gsap.registerPlugin(window.ScrollTrigger);
+
+      // Simple helper to safely query
+      const $ = sel => document.querySelector(sel);
+      const $$ = sel => Array.from(document.querySelectorAll(sel));
+
+      // Page intro timeline (runs on each load/refresh)
+      if (!reduced) {
+        const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+        tl.from(".nav-container", { y: -20, opacity: 0, duration: 0.5 })
+          .from(".mono", { y: 8, opacity: 0, duration: 0.45 }, "-=0.25")
+          .from(".main-title", { y: 18, opacity: 0, duration: 0.7, stagger: 0.06 }, "-=0.2")
+          .from(".hero-desc", { y: 12, opacity: 0, duration: 0.5 }, "-=0.35")
+          .from(".cta-group a", { y: 10, opacity: 0, duration: 0.45, stagger: 0.08 }, "-=0.3");
+      } else {
+        // Minimal fade if reduced motion requested
+        $$(".mono, .main-title, .hero-desc, .cta-group a").forEach(el => el.style.opacity = 1);
+      }
+
+      // Subtle looping animations when idle (floating, shimmer)
+      if (!reduced) {
+        gsap.to(".gradient-text", { y: -6, duration: 3.5, yoyo: true, repeat: -1, ease: "sine.inOut" });
+        gsap.to(".hero-content", { rotation: 0.35, duration: 10, yoyo: true, repeat: -1, ease: "sine.inOut" });
+        gsap.to("#bg", { opacity: 0.85, duration: 8, yoyo: true, repeat: -1, ease: "sine.inOut" });
+      }
+
+      // Make each project item gently float (staggered)
+      $$(".project-item").forEach((el, i) => {
+        if (reduced) return;
+        const dur = 4 + Math.random() * 3;
+        gsap.to(el, { y: -6 - Math.random() * 6, x: (Math.random() - 0.5) * 2, duration: dur, yoyo: true, repeat: -1, ease: "sine.inOut", delay: i * 0.3 });
+      });
+
+      // Overlay hover polished with GSAP (works with keyboard focus too)
+      $$(".project-item").forEach(el => {
+        const overlay = el.querySelector(".overlay");
+        if (!overlay) return;
+        // make sure initial state matches CSS
+        gsap.set(overlay, { y: 12, opacity: 0 });
+        el.addEventListener("mouseenter", () => {
+          if (reduced) return;
+          gsap.to(overlay, { y: 0, opacity: 1, duration: 0.28, ease: "power2.out" });
+        });
+        el.addEventListener("mouseleave", () => {
+          if (reduced) return;
+          gsap.to(overlay, { y: 12, opacity: 0, duration: 0.32, ease: "power2.in" });
+        });
+        // keyboard focus/blur
+        el.addEventListener("focus", () => gsap.to(overlay, { y: 0, opacity: 1, duration: 0.28 }));
+        el.addEventListener("blur", () => gsap.to(overlay, { y: 12, opacity: 0, duration: 0.28 }));
+      });
+
+      // Replace scroll listener for counters with IntersectionObserver + GSAP driven increment
+      const stats = $("#stats");
+      if (stats) {
+        const counters = $$(".counter");
+        let counted = false;
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !counted) {
+              counters.forEach(c => {
+                const target = +c.getAttribute("data-target") || 0;
+                if (reduced) {
+                  c.textContent = target;
+                  return;
+                }
+                const obj = { val: 0 };
+                gsap.to(obj, {
+                  val: target,
+                  duration: 1.6,
+                  ease: "power1.out",
+                  onUpdate: () => { c.textContent = Math.floor(obj.val); }
+                });
+              });
+              counted = true;
+              io.disconnect();
+            }
+          });
+        }, { threshold: 0.4 });
+        io.observe(stats);
+      }
+
+      // Smooth nav-links open/close animation
+      const navToggleBtn = $("#navToggle");
+      const navLinkBlock = $("#navLinks");
+      if (navToggleBtn && navLinkBlock) {
+        navToggleBtn.addEventListener("click", () => {
+          const open = navLinkBlock.classList.contains("open");
+          if (!open) {
+            navLinkBlock.style.display = "flex";
+            gsap.fromTo(navLinkBlock, { autoAlpha: 0, y: -8 }, { autoAlpha: 1, y: 0, duration: 0.25, ease: "power2.out" });
+          } else {
+            gsap.to(navLinkBlock, { autoAlpha: 0, y: -8, duration: 0.18, ease: "power2.in", onComplete: () => navLinkBlock.style.display = "" });
+          }
+        });
+      }
+
+      // Small entrance for footer when scrolled into view
+      if (!reduced) {
+        gsap.from(".site-footer", {
+          scrollTrigger: { trigger: ".site-footer", start: "top bottom" },
+          y: 20, opacity: 0, duration: 0.9, ease: "power2.out"
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
